@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import bgvideo from "./asset/bgvideo.mp4";
+import walletButton from "./component/WalletButton";
+
+const butt = () => {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <video src={bgvideo} autoPlay loop />
+
+      <div className="content">
+        <h1>G E N E S I S G A I N</h1>
+      </div>
+
+      <walletButton onClick={butt.handleClick} text="Click me" />
     </div>
   );
 }
